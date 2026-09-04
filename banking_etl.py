@@ -222,7 +222,7 @@ account_summary = (
         .groupBy('account_type','transaction_type')
 
         .agg(
-            count('*').alias('transaction_amount'),
+            count('*').alias('transaction_count'),
 
         round(sum('transaction_amount'), 2).alias('total_amount'),
         round(avg('transaction_amount'), 2).alias('average_amount')        
